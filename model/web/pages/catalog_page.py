@@ -1,5 +1,5 @@
 from allure_commons._allure import step
-from selene import browser, have, be, by
+from selene import browser, have, be
 
 
 class CatalogPage:

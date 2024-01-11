@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 
 from utils import attach
-from utils.resource_handler import path
+from utils.resource_handler import get_path
 
 BrowserType = Literal['chrome', 'firefox']
 
@@ -22,10 +22,9 @@ class Configure(pydantic_settings.BaseSettings):
     version: str = '119'
     login: str = 'dummy_value'
     password: str = 'dummy_value'
-    remote_browser_url: str = 'dummy_value'
 
 
-config = Configure(_env_file=path(f'.env.{Configure().context}'))
+config = Configure(_env_file=get_path(f'.env.web.{Configure().context}'))
 
 
 @pytest.fixture(scope='function', autouse=True)
@@ -43,12 +42,8 @@ def configure_browser():
         options.capabilities.update(selenoid_capabilities)
         options.add_argument(f'--window-size={config.width},{config.height}')
 
-        # driver = webdriver.Remote(
-        #     command_executor=f"https://{config.login}:{config.password}@{config.remote_browser_url}",
-        #     options=options
-        # )
         driver = webdriver.Remote(
-            command_executor=f"https://user1:1234@selenoid.autotests.cloud/wd/hub",
+            command_executor=f"https://{config.login}:{config.password}@selenoid.autotests.cloud/wd/hub",
             options=options
         )
         browser.config.driver = driver
@@ -63,10 +58,9 @@ def configure_browser():
 
     yield
 
-    attach.add_screenshot(browser)
-    attach.add_html(browser)
-    if config.browser == 'chrome':
-        attach.add_logs(browser)
-    attach.add_video(browser)
+    attach.add_screenshot()
+    attach.add_html()
+    if config.context == 'remote':
+        attach.add_video()
 
     browser.quit()

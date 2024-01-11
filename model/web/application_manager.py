@@ -12,6 +12,7 @@ class Application:
         self.catalog_page = CatalogPage()
         self.item_page = ItemPage()
         self.search_panel = SearchComponent()
+
         self.menu_panel = MenuComponent()
         self.cart_panel = CartComponent()
 

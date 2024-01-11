@@ -12,6 +12,7 @@ class TestSearchPage:
     @allure.label('layer', 'web')
     @pytest.mark.parametrize('item_search', ['Атомные привычки'])
     @pytest.mark.web
+    @pytest.mark.all
     def test_item_search(self, item_search):
         app.main_page.open_main_page()
         app.search_panel.type_then_search(item_search)

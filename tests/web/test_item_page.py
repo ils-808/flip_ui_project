@@ -11,6 +11,7 @@ class TestItemPage:
     @allure.tag('smoke')
     @allure.label('layer', 'web')
     @pytest.mark.web
+    @pytest.mark.all
     @pytest.mark.parametrize('first_category,second_category,item_name',
                              [('Книги', 'Художественная литература', 'Шах и мат')])
     def test_open_item_page(self, first_category, second_category, item_name):

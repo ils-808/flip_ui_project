@@ -11,6 +11,7 @@ class TestMainPage:
     @allure.tag('smoke')
     @allure.label('layer', 'web')
     @pytest.mark.web
+    @pytest.mark.all
     def test_menu_present(self):
         app.main_page.open_main_page()
 
@@ -21,6 +22,7 @@ class TestMainPage:
     @allure.tag('smoke')
     @allure.label('layer', 'web')
     @pytest.mark.web
+    @pytest.mark.all
     def test_banner_carousel_present(self):
         app.main_page.open_main_page()
 
