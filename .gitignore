@@ -159,6 +159,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 .env.*
-/notifications
 /allure-results
 /tests/web/allure-results
+/tests/mobile/allure-results
