@@ -2,7 +2,7 @@
 > <a target="_blank" href="https://www.flip.kz/">flip.kz</a>
 
 ----
-![main page screenshot](/images/main_page.jpg)
+![main page screenshot](/images/main_page.JPG)
 ----
 
 ### Особенности проекта
