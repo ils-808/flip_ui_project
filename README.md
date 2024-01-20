@@ -73,17 +73,37 @@ allure serve
 2. Нажать "Build with Parameters"
 3. Указать необходимые MARK и CONTEXT
 4. Нажать "Build" 
+
+Сопроводительный скриншот:
+<img title="Jira" src="images/jenkins_build.JPG"/>
 ----
 ### Allure отчет
 Пример выполнения Allure отчета доступен по ссылке:
 > <a target="_blank" href="https://jenkins.autotests.cloud/job/C08-itpmkz-diploma/24/allure/">Ссылка</a>
+
+Отчет: 
+<img title="Allure Report" src="images/Allure_report.JPG"/>
+
+Детали: 
+<img title="Allure Report" src="images/Allure_report_details.JPG"/>
+
 ----
 ### Интеграция с Allure TestOps
 Пример интеграции доступен по ссылке:
 > <a target="_blank" href="https://allure.autotests.cloud/project/3965/dashboards">Ссылка</a>
+
+Запуск тестовых прогонов: 
+<img title="Allure Launch" src="images/allure_launches.JPG"/>
+
+Детали тестового прогона:
+<img title="Allure Details" src="images/allure_details.JPG"/>
+
 ----
 ### Интеграция с Jira
 > <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-1049">Ссылка</a>
+
+Тикет:
+<img title="Jira" src="images/jira_ticket.JPG"/>
 
 ----
 ### Оповещения в Telegram

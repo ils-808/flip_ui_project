@@ -1,6 +1,5 @@
-from selene import browser, have, be, by
+from selene import browser, have
 from allure import step
-from selenium.webdriver.common.by import By
 
 
 class ItemPage:

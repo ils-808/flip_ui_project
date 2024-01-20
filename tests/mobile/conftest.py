@@ -3,12 +3,12 @@ import allure_commons
 import pytest
 from appium import webdriver
 from config import loaded_configuration
-from utils import attach
+from flip_ui_project_tests.utils import attach
 
 from appium.options.android import UiAutomator2Options
 from selene import browser, support
 
-from utils.resource_handler import get_path
+from flip_ui_project_tests.utils.resource_handler import get_path
 
 
 @pytest.fixture(scope='function', autouse=True)

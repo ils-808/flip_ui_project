@@ -1,7 +1,7 @@
 import allure
 import pytest
 
-from model.web.application_manager import app
+from flip_ui_project_tests.model.web.application_manager import app
 
 
 @allure.epic('Search page')

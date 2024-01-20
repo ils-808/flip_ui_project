@@ -6,8 +6,8 @@ from selene import browser
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 
-from utils import attach
-from utils.resource_handler import get_path
+from flip_ui_project_tests.utils import attach
+from flip_ui_project_tests.utils.resource_handler import get_path
 
 BrowserType = Literal['chrome', 'firefox']
 
@@ -20,6 +20,8 @@ class Configure(pydantic_settings.BaseSettings):
     timeout: float = 10.0
     browser: BrowserType = 'chrome'
     version: str = '119'
+    selenoid_login: str = 'dummy'
+    selenoid_password: str = 'dummy'
 
 
 config = Configure(_env_file=get_path(f'.env.web.{Configure().context}'))
@@ -41,7 +43,7 @@ def configure_browser():
         options.add_argument(f'--window-size={config.width},{config.height}')
 
         driver = webdriver.Remote(
-            command_executor=f"https://user1:1234@selenoid.autotests.cloud/wd/hub",
+            command_executor=f"https://{config.selenoid_login}:{config.selenoid_password}@selenoid.autotests.cloud/wd/hub",
             options=options
         )
         browser.config.driver = driver
