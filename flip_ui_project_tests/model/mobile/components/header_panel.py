@@ -11,4 +11,4 @@ class HeaderComponent:
     def go_to_auth(self):
         with step('Open auth page'):
             browser.element(
-                (AppiumBy.XPATH, '//android.widget.TextView[@resource-id="kz.flip.mobile:id/login_btn"]')).click()
+                (AppiumBy.ID, 'kz.flip.mobile:id/login_btn')).click()

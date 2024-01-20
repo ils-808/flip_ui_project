@@ -10,8 +10,8 @@ class SearchComponent:
 
     def search(self, value):
         with step(f'Search {value}'):
-            browser.element((AppiumBy.XPATH,
-                             '//android.widget.AutoCompleteTextView[@resource-id="kz.flip.mobile:id/search_edit_text"]')).send_keys(
+            browser.element((AppiumBy.ID,
+                             'kz.flip.mobile:id/search_edit_text')).send_keys(
                 value)
 
     def check_search_hints(self, amonunt):
