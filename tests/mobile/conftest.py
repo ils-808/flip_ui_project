@@ -26,7 +26,6 @@ def configure_mobile_browser():
     if loaded_configuration.context == 'remote':
         options.set_capability('platformVersion', loaded_configuration.platformVersion)
         options.set_capability(
-            # Set other BrowserStack capabilities
             'bstack:options', {
                 "projectName": "First Python project",
                 "buildName": "browserstack-build-1",
