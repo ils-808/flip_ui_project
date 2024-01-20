@@ -73,6 +73,7 @@ allure serve
 2. Нажать "Build with Parameters"
 3. Указать необходимые MARK и CONTEXT
 4. Нажать "Build"
+<br>
 Сопроводительный скриншот:
 <img title="Jira" src="images/jenkins_build.JPG"/>
 ----
