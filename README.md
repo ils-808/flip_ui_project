@@ -76,6 +76,8 @@ allure serve
 <br>
 Сопроводительный скриншот:
 <img title="Jira" src="images/jenkins_build.JPG"/>
+
+
 ----
 ### Allure отчет
 Пример выполнения Allure отчета доступен по ссылке:
